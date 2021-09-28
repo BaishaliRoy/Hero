@@ -1,0 +1,19 @@
+<div class="input-group mb">
+    <input type="input" 
+    class="form-control" 
+    #searchInput 
+    (input)="search(searchInput.value)">
+    <span class="input-group-text" id="basic-addon2">
+        <mat-icon color="primary" matSuffix>search</mat-icon>
+    </span>
+</div>
+<div class="search-result" [ngClass]="[listDisplay]">
+    <span>
+        <ul class="list-group">
+            <li  *ngFor="let hero of heroes$ | async " class="list-group-item">
+                <a [routerLink]="['/hero/detail', hero.id]">{{hero.heroName}} </a>
+            </li>
+        </ul> 
+    </span>
+    
+</div>

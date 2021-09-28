@@ -1,0 +1,31 @@
+<div class="row my-5 border border-primary">
+   <div class="col col-xs-6 mx-5 border border-primary">
+      <mat-nav-list *ngFor="let hero of heroList, index as i">
+         <mat-list-item style=" color: black; background-color: rgba(34, 24, 24, 0.158);" class="mb-2">
+            <a matLine [routerLink]="['detail',hero.id]">{{hero.heroName}}</a>
+            <button mat-icon-button>
+               <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button>
+               <mat-icon>edit</mat-icon>
+            </button>
+         </mat-list-item>
+      </mat-nav-list> 
+      <div class="row mx fixDiv border border-primary">
+         <div class="col-xs-6 d-flex ">
+            <button mat-raised-button  (click)="goToPreviousPage()"> << </button>
+         </div>
+         <div class="col-xs-6 d-flex flex-row-reverse">
+            <button mat-raised-button color="disabled" (click)="goToNextPage()" class="ml-3" > >> </button>
+         </div>  
+      </div>
+      
+    </div>
+    <div class=" col col-xs-6 mx-5 border border-primary ">
+      <router-outlet></router-outlet>
+    </div>
+</div> 
+
+
+
+

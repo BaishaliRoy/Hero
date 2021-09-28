@@ -1,0 +1,17 @@
+.search-result{
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    width: 25%;
+    right: auto;
+    display: block;
+}
+
+.search-result li:hover {
+    background-color: #c9e4eb;
+    color: white;
+  }
+
+.search-display {
+    display: none;
+}

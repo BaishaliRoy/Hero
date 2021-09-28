@@ -1,0 +1,16 @@
+<div class="row my-5">
+    <div *ngFor="let hero of topHeroes" class="col my-5 col-lg-3 ">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{hero.heroName}}</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{hero.imageSource}} alt="Photo of a Shiba Inu" height="180px">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          </p>
+        </mat-card-content>
+      </mat-card>  
+    </div> 
+  </div>
