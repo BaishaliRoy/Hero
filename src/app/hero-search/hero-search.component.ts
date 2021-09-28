@@ -45,5 +45,6 @@ export class HeroSearchComponent implements OnInit {
 
   showList(): void{
     this.listDisplay =  '' ;
+    
   }
 }
